@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  font-size: 1.6rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  background-color: hsl(210, 60%, 98%);
+}
+body main {
+  width: 375px;
+  padding: 20px;
+  background-color: white;
+  margin-top: 15px;
+}
+body main .header {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+body main .header .notifications-count {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+body main .header .notifications-count span {
+  padding: 2px 10px;
+  background-color: hsl(219, 85%, 26%);
+  color: white;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  margin-left: 5px;
+}
+body main .header .option_read_msg {
+  color: hsl(219, 12%, 42%);
+}
+body main .header .option_read_msg:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+body main .div--container-msg .notify1, body main .div--container-msg .notify7, body main .div--container-msg .notify6, body main .div--container-msg .notify5, body main .div--container-msg .notify4, body main .div--container-msg .notify3, body main .div--container-msg .notify2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+body main .div--container-msg .notify1 .ico-Mark_Webber, body main .div--container-msg .notify7 .ico-Mark_Webber, body main .div--container-msg .notify6 .ico-Mark_Webber, body main .div--container-msg .notify5 .ico-Mark_Webber, body main .div--container-msg .notify4 .ico-Mark_Webber, body main .div--container-msg .notify3 .ico-Mark_Webber, body main .div--container-msg .notify2 .ico-Mark_Webber {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-image: url("../assets/images/avatar-mark-webber.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .div--container-msg .notify1 .body-notify, body main .div--container-msg .notify7 .body-notify, body main .div--container-msg .notify6 .body-notify, body main .div--container-msg .notify5 .body-notify, body main .div--container-msg .notify4 .body-notify, body main .div--container-msg .notify3 .body-notify, body main .div--container-msg .notify2 .body-notify {
+  width: 80%;
+  color: hsl(219, 12%, 42%);
+}
+body main .div--container-msg .notify1 .body-notify .msg--from, body main .div--container-msg .notify7 .body-notify .msg--from, body main .div--container-msg .notify6 .body-notify .msg--from, body main .div--container-msg .notify5 .body-notify .msg--from, body main .div--container-msg .notify4 .body-notify .msg--from, body main .div--container-msg .notify3 .body-notify .msg--from, body main .div--container-msg .notify2 .body-notify .msg--from {
+  color: hsl(224, 21%, 14%);
+  font-weight: 800;
+}
+body main .div--container-msg .notify1 .body-notify .msg--from:hover, body main .div--container-msg .notify7 .body-notify .msg--from:hover, body main .div--container-msg .notify6 .body-notify .msg--from:hover, body main .div--container-msg .notify5 .body-notify .msg--from:hover, body main .div--container-msg .notify4 .body-notify .msg--from:hover, body main .div--container-msg .notify3 .body-notify .msg--from:hover, body main .div--container-msg .notify2 .body-notify .msg--from:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+body main .div--container-msg .notify1 .body-notify .post-description, body main .div--container-msg .notify7 .body-notify .post-description, body main .div--container-msg .notify6 .body-notify .post-description, body main .div--container-msg .notify5 .body-notify .post-description, body main .div--container-msg .notify4 .body-notify .post-description, body main .div--container-msg .notify3 .body-notify .post-description, body main .div--container-msg .notify2 .body-notify .post-description {
+  font-weight: 800;
+}
+body main .div--container-msg .notify1 .body-notify .post-description:hover, body main .div--container-msg .notify7 .body-notify .post-description:hover, body main .div--container-msg .notify6 .body-notify .post-description:hover, body main .div--container-msg .notify5 .body-notify .post-description:hover, body main .div--container-msg .notify4 .body-notify .post-description:hover, body main .div--container-msg .notify3 .body-notify .post-description:hover, body main .div--container-msg .notify2 .body-notify .post-description:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+body main .div--container-msg .notify1 .body-notify .ico--ball-red, body main .div--container-msg .notify7 .body-notify .ico--ball-red, body main .div--container-msg .notify6 .body-notify .ico--ball-red, body main .div--container-msg .notify5 .body-notify .ico--ball-red, body main .div--container-msg .notify4 .body-notify .ico--ball-red, body main .div--container-msg .notify3 .body-notify .ico--ball-red, body main .div--container-msg .notify2 .body-notify .ico--ball-red {
+  display: inline-block;
+  margin-left: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: hsl(1, 90%, 64%);
+  border-radius: 100%;
+}
+body main .div--container-msg .notify1 .body-notify .notify--time-ago, body main .div--container-msg .notify7 .body-notify .notify--time-ago, body main .div--container-msg .notify6 .body-notify .notify--time-ago, body main .div--container-msg .notify5 .body-notify .notify--time-ago, body main .div--container-msg .notify4 .body-notify .notify--time-ago, body main .div--container-msg .notify3 .body-notify .notify--time-ago, body main .div--container-msg .notify2 .body-notify .notify--time-ago {
+  margin-top: 4px;
+}
+body main .div--container-msg .notify2 .ico-Angela {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-image: url("../assets/images/avatar-angela-gray.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .div--container-msg .notify3 .ico-jacob {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-image: url("../assets/images/avatar-jacob-thompson.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .div--container-msg .notify3 .group {
+  color: hsl(219, 85%, 26%);
+  font-weight: 800;
+}
+body main .div--container-msg .notify3 .group:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+body main .div--container-msg .notify4 {
+  align-items: flex-start;
+  background-color: hsl(0, 0%, 100%);
+}
+body main .div--container-msg .notify4 .ico-risky {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-image: url("../assets/images/avatar-rizky-hasanuddin.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .div--container-msg .notify4 .card-message {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid hsl(211, 68%, 94%);
+  border-radius: 5px;
+}
+body main .div--container-msg .notify4 .card-message:hover {
+  background-color: hsl(211, 68%, 94%);
+  cursor: pointer;
+}
+body main .div--container-msg .notify5 {
+  background-color: hsl(0, 0%, 100%);
+}
+body main .div--container-msg .notify5 .ico-smith {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-image: url("../assets/images/avatar-kimberly-smith.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .div--container-msg .notify5 .body-notify .notify--up {
+  display: flex;
+  justify-content: space-around;
+}
+body main .div--container-msg .notify5 .body-notify .notify--up .ico-picture {
+  display: block;
+  width: 10px;
+  height: 35px;
+  background-image: url("../assets/images/image-chess.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20%;
+}
+body main .div--container-msg .notify5 .body-notify .notify--up .ico-picture:hover {
+  cursor: pointer;
+}
+body main .div--container-msg .notify6 {
+  background-color: white;
+}
+body main .div--container-msg .notify6 .ico-nathan {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-image: url("../assets/images/avatar-nathan-peterson.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .div--container-msg .notify7 {
+  background-color: white;
+}
+body main .div--container-msg .notify7 .ico-anna {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-image: url("../assets/images/avatar-anna-kim.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .div--container-msg .notify7 .group {
+  color: hsl(219, 85%, 26%);
+  font-weight: 800;
+}
+body main .div--container-msg .new-msg {
+  background-color: hsl(211, 68%, 94%);
+}
+body main .div--container-msg .read-msg {
+  background-color: white;
+}
+
+@media (min-width: 1440px) {
+  main {
+    width: 650px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+  }
+  main .div--container-msg .notify1 .body-notify, body main .div--container-msg .notify2 .body-notify, body main .div--container-msg .notify3 .body-notify, body main .div--container-msg .notify4 .body-notify, body main .div--container-msg .notify5 .body-notify, body main .div--container-msg .notify6 .body-notify, body main .div--container-msg .notify7 .body-notify {
+    width: 90%;
+  }
+  main .div--container-msg .notify5 .body-notify .notify--up {
+    align-items: center;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=main.css.map */
