@@ -1,4 +1,3 @@
-
 //# Front-end Style Guide
 
 //## Layout
@@ -36,11 +35,12 @@ $font-family_Jakarta: 'Plus Jakarta Sans', sans-serif;
 //- Family: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
 //- Weights: 500, 800
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     font-size: 62.5%;
 }
@@ -59,238 +59,259 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    // width: 100vw;
     font-size: $font_size_paragraph;
     font-family: $font-family_Jakarta;
     font-weight: 500;
     background-color: $Very_light_grayish_blue;
-   
-   
-   // height: auto;
+
+
+    // height: auto;
 
     main {
-width: 375px;
+        width: 375px;
         padding: 20px;
         background-color: white;
 
         margin-top: 15px;
-            .header {
-                margin: 20px 0px;
+
+        .header {
+            margin: 20px 0px;
+            display: flex;
+            justify-content: space-between;
+
+            .notifications-count {
+                font-size: 1.8rem;
+                font-weight: 800;
+
+                span {
+
+                    padding: 2px 10px;
+                    background-color: $Blue;
+                    color: white;
+                    border-radius: 5px;
+                    font-size: $font_size_paragraph;
+                    margin-left: 5px;
+                }
+            }
+
+            .option_read_msg {
+                color: $Dark_grayish_blue;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $Blue;
+                }
+            }
+        }
+
+
+
+        .div--container-msg {
+            width: 100%;
+
+            .notify1 {
                 display: flex;
                 justify-content: space-between;
-        
-                .notifications-count {
-                    font-size: 1.8rem;
-                    font-weight: 800;
-        
-                    span {
-        
-                        padding: 2px 10px;
-                        background-color: $Blue;
-                        color: white;
-                        border-radius: 5px;
-                        font-size: $font_size_paragraph;
+                align-items: center;
+                // background-color: $Very_light_grayish_blue;
+                padding: 12px;
+                border-radius: 5px;
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+                width: 100%;
+
+                .ico-Mark_Webber {
+                    @include avatar(45px, 45px, "../assets/images/avatar-mark-webber.webp");
+                }
+
+                .body-notify {
+                    width: 80%;
+                    color: $Dark_grayish_blue;
+
+                    .msg--from {
+                        color: $Very_dark_blue;
+                        font-weight: 800;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: $Blue;
+                        }
+
+                    }
+
+                    .post-description {
+                        font-weight: 800;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: $Blue;
+                        }
+                    }
+
+                    .ico--ball-red {
+                        display: inline-block;
                         margin-left: 5px;
+                        width: 8px;
+                        height: 8px;
+                        background-color: $Red;
+                        border-radius: 100%;
+                    }
+
+                    .notify--time-ago {
+                        margin-top: 4px;
                     }
                 }
-        
-                .option_read_msg {
-                    color: $Dark_grayish_blue;
-                    &:hover{
+            }
+
+
+
+            .notify2 {
+                @extend .notify1;
+
+                .ico-Angela {
+                    @include avatar(45px, 45px, "../assets/images/avatar-angela-gray.webp");
+                }
+            }
+
+            .notify3 {
+                @extend .notify1;
+
+                .ico-jacob {
+                    @include avatar(45px, 45px, "../assets/images/avatar-jacob-thompson.webp");
+                }
+
+                .group {
+                    color: $Blue;
+                    font-weight: 800;
+
+                    &:hover {
                         cursor: pointer;
                         color: $Blue;
                     }
                 }
             }
-        
-        
-        
-            .div--container-msg {
-               // width: 100%;
-        
-                .notify1 {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                   // background-color: $Very_light_grayish_blue;
-                    padding: 12px;
+
+
+            .notify4 {
+                @extend .notify1;
+                align-items: flex-start;
+                background-color: $White;
+
+                .ico-risky {
+                    @include avatar(45px, 45px, "../assets/images/avatar-rizky-hasanuddin.webp");
+                }
+
+                .card-message {
+                    margin-top: 5px;
+                    padding: 10px;
+                    border: 1px solid $Light_grayish_blue_1;
                     border-radius: 5px;
-                    font-size: 1.4rem;
-                    margin-bottom: 10px;
-        
-                    .ico-Mark_Webber {
-                        @include avatar(45px, 45px, "../assets/images/avatar-mark-webber.webp");
+
+                    &:hover {
+                        background-color: $Light_grayish_blue_1;
+                        cursor: pointer;
                     }
-        
-                    .body-notify {
-                        width: 80%;
-                        color: $Dark_grayish_blue;
-        
-                        .msg--from {
-                            color: $Very_dark_blue;
-                            font-weight: 800;
-                            &:hover{
+
+                }
+
+            }
+
+            .notify5 {
+                @extend .notify1;
+                background-color: $White;
+
+                .ico-smith {
+                    @include avatar(45px, 45px, "../assets/images/avatar-kimberly-smith.webp");
+                }
+
+                .body-notify {
+
+                    .notify--up {
+                        display: flex;
+                        justify-content: space-between;
+
+                        span {
+                            width: 200px;
+                        }
+
+                        .ico-picture {
+                            @include avatar(40px, 35px, "../assets/images/image-chess.webp");
+                            border-radius: 20%;
+
+                            &:hover {
                                 cursor: pointer;
-                                color: $Blue;
-                            }
-        
-                        }
-        
-                        .post-description {
-                            font-weight: 800;
-                            &:hover{
-                                cursor: pointer;
-                                color: $Blue;
-                            }
-                        }
-        
-                        .ico--ball-red {
-                            display: inline-block;
-                            margin-left: 5px;
-                            width: 8px;
-                            height: 8px;
-                            background-color: $Red;
-                            border-radius: 100%;
-                        }
-        
-                        .notify--time-ago {
-                            margin-top: 4px;
-                        }
-                    }
-                }
-        
-               
-        
-                .notify2 {
-                    @extend .notify1;
-        
-                    .ico-Angela {
-                        @include avatar(45px, 45px, "../assets/images/avatar-angela-gray.webp");
-                    }
-                }
-        
-                .notify3 {
-                    @extend .notify1;
-        
-                    .ico-jacob {
-                        @include avatar(45px, 45px, "../assets/images/avatar-jacob-thompson.webp");
-                    }
-        
-                    .group {
-                        color: $Blue;
-                        font-weight: 800;
-                        &:hover{
-                            cursor: pointer;
-                            color: $Blue;
-                        }
-                    }
-                }
-        
-        
-                .notify4 {
-                    @extend .notify1;
-                    align-items: flex-start;
-                    background-color: $White;
-        
-                    .ico-risky {
-                        @include avatar(45px, 45px, "../assets/images/avatar-rizky-hasanuddin.webp");
-                    }
-        
-                    .card-message {
-                        margin-top: 5px;
-                        padding: 10px;
-                        border: 1px solid $Light_grayish_blue_1;
-                        border-radius: 5px;
-                       &:hover{
-                            background-color: $Light_grayish_blue_1;
-                            cursor: pointer;
-                        }
-        
-                    }
-        
-                }
-        
-                .notify5 {
-                    @extend .notify1;
-                    background-color: $White;
-        
-                    .ico-smith {
-                        @include avatar(45px, 45px, "../assets/images/avatar-kimberly-smith.webp");
-                    }
-        
-                    .body-notify {
-        
-                        .notify--up {
-                            display: flex;
-                            justify-content: space-around;
-                            .ico-picture {
-                                @include avatar(10px, 35px, "../assets/images/image-chess.webp");
-                                border-radius: 20%;
-                                &:hover{
-                                    cursor: pointer;
-                                   
-                                }
+
                             }
                         }
                     }
-                }
-        
-                .notify6 {
-                    @extend .notify1;
-                    background-color: white;
-        
-                    .ico-nathan {
-                        @include avatar(45px, 45px, "../assets/images/avatar-nathan-peterson.webp");
-                    }
-                }
-                .notify7 {
-                    @extend .notify1;
-                    background-color: white;
-        
-                    .ico-anna {
-                        @include avatar(45px, 45px, "../assets/images/avatar-anna-kim.webp");
-                    }
-                    .group {
-                        color: $Blue;
-                        font-weight: 800;
-                    }
-                }
-                .new-msg{
-                    background-color: $Light_grayish_blue_1;
-                }
-                .read-msg{
-                    background-color: white;
                 }
             }
+
+            .notify6 {
+                @extend .notify1;
+                background-color: white;
+
+                .ico-nathan {
+                    @include avatar(45px, 45px, "../assets/images/avatar-nathan-peterson.webp");
+                }
+            }
+
+            .notify7 {
+                @extend .notify1;
+                background-color: white;
+
+                .ico-anna {
+                    @include avatar(45px, 45px, "../assets/images/avatar-anna-kim.webp");
+                }
+
+                .group {
+                    color: $Blue;
+                    font-weight: 800;
+                }
+            }
+
+            .new-msg {
+                background-color: $Light_grayish_blue_1;
+            }
+
+            .read-msg {
+                background-color: white;
+            }
         }
+    }
 
 }
 
 
 
-@media(min-width:1440px){
-  main{
-   
-    width: 650px;
-    max-width: 1000px;
-    margin: auto;
-    padding: 30px;
-    .div--container-msg {
-        .notify1{
-             .body-notify{
-                width: 90%;
-             }
-        }
-        .notify5{
-            .body-notify{
-                .notify--up{
-                    align-items: center;
-                    justify-content: space-between;
+@media(min-width:1440px) {
+    body {
+        main {
+
+            width: 650px;
+            max-width: 1000px;
+
+            padding: 30px;
+
+            .div--container-msg {
+                .notify1 {
+                    .body-notify {
+                        width: 90%;
+                    }
                 }
+
+                .notify5 {
+                    .body-notify {
+                        .notify--up {
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+
             }
-       }
 
+        }
     }
-
-  }
 }

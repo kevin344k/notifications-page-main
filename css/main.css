@@ -12,7 +12,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
   font-size: 1.6rem;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 500;
@@ -48,6 +47,9 @@ body main .header .option_read_msg:hover {
   cursor: pointer;
   color: hsl(219, 85%, 26%);
 }
+body main .div--container-msg {
+  width: 100%;
+}
 body main .div--container-msg .notify1, body main .div--container-msg .notify7, body main .div--container-msg .notify6, body main .div--container-msg .notify5, body main .div--container-msg .notify4, body main .div--container-msg .notify3, body main .div--container-msg .notify2 {
   display: flex;
   justify-content: space-between;
@@ -56,6 +58,7 @@ body main .div--container-msg .notify1, body main .div--container-msg .notify7, 
   border-radius: 5px;
   font-size: 1.4rem;
   margin-bottom: 10px;
+  width: 100%;
 }
 body main .div--container-msg .notify1 .ico-Mark_Webber, body main .div--container-msg .notify7 .ico-Mark_Webber, body main .div--container-msg .notify6 .ico-Mark_Webber, body main .div--container-msg .notify5 .ico-Mark_Webber, body main .div--container-msg .notify4 .ico-Mark_Webber, body main .div--container-msg .notify3 .ico-Mark_Webber, body main .div--container-msg .notify2 .ico-Mark_Webber {
   display: block;
@@ -159,11 +162,14 @@ body main .div--container-msg .notify5 .ico-smith {
 }
 body main .div--container-msg .notify5 .body-notify .notify--up {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+body main .div--container-msg .notify5 .body-notify .notify--up span {
+  width: 200px;
 }
 body main .div--container-msg .notify5 .body-notify .notify--up .ico-picture {
   display: block;
-  width: 10px;
+  width: 40px;
   height: 35px;
   background-image: url("../assets/images/image-chess.webp");
   background-position: center;
@@ -210,16 +216,15 @@ body main .div--container-msg .read-msg {
 }
 
 @media (min-width: 1440px) {
-  main {
+  body main {
     width: 650px;
     max-width: 1000px;
-    margin: auto;
     padding: 30px;
   }
-  main .div--container-msg .notify1 .body-notify, body main .div--container-msg .notify2 .body-notify, body main .div--container-msg .notify3 .body-notify, body main .div--container-msg .notify4 .body-notify, body main .div--container-msg .notify5 .body-notify, body main .div--container-msg .notify6 .body-notify, body main .div--container-msg .notify7 .body-notify {
+  body main .div--container-msg .notify1 .body-notify, body main .div--container-msg .notify2 .body-notify, body main .div--container-msg .notify3 .body-notify, body main .div--container-msg .notify4 .body-notify, body main .div--container-msg .notify5 .body-notify, body main .div--container-msg .notify6 .body-notify, body main .div--container-msg .notify7 .body-notify {
     width: 90%;
   }
-  main .div--container-msg .notify5 .body-notify .notify--up {
+  body main .div--container-msg .notify5 .body-notify .notify--up {
     align-items: center;
     justify-content: space-between;
   }
